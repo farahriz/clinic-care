@@ -1,2 +1,4 @@
 .venv
+.nuxt
+node_modules/
 
