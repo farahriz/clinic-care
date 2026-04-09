@@ -13,11 +13,19 @@
     </ConsultationForm>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import ConsultationForm from '~/components/consultationForm.vue';
 
 const readOnly = ref(true)
 const hasUnsavedChanges = ref(false)
+
+const fetchedData = ref({
+    id: "",
+    patient: "",
+    consultDate: "",
+    code: "",
+    description: ""
+})
 
 const consultNoteData = ref({
     id: "",
@@ -26,6 +34,19 @@ const consultNoteData = ref({
     code: "",
     description: ""
 })
+
+watch(
+    () => consultNoteData,
+    (newVal, oldVal) => {
+        Object.keys(newVal).forEach(key => {
+            if(fetchedData.value[key] != newVal[key]){
+                hasUnsavedChanges.value = true
+                return
+            }
+        })
+    },
+    {deep: true}
+)
 
 function initEditMode(){
     readOnly.value = !readOnly.value
