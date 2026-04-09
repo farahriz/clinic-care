@@ -1,6 +1,16 @@
-# beautiful soup
+import requests
 
-website_url = "https://www.icd10data.com/ICD10CM/"
+website_url = "https://www.icd10data.com/ICD10CM/Codes"
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
+
+response = requests.get(website_url, headers=headers)
+if(response.status_code == 200):
+    html_content = response.content
+    print(html_content)
+else:
+    print(response)
 
 target_page_group = "A00-B99"
 
