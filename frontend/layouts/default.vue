@@ -14,7 +14,9 @@
         </v-navigation-drawer>
 
         <v-main>
-            <NuxtPage />
+            <v-container>
+                <NuxtPage />
+            </v-container>
         </v-main>
     </v-layout>
 </template>
