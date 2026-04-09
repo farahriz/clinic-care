@@ -33,6 +33,10 @@ const naviLinks = [
     {
         title: 'Consultation Notes',
         path: '/consultations'
+    },
+    {
+        title: 'Diagnoses',
+        path: '/diagnoses'
     }
 ]
 </script>
