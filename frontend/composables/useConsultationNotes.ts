@@ -1,48 +1,40 @@
 interface ConsultNote {
     id?: string,
-    code: string,
-    description: string
-    patient?: string,
-    consultDate?: string
-    createdAt: string,
-    createdBy: string,
-    updatedAt: string,
-    updatedBy: string
+    diagnosisId: string,
+    desc: string
+    patient: string,
+    created_at: string,
 }
 
 interface CreateConsult {
-    code: string,
+    diagnosis_id: string,
     description: string
     patient?: string,
     consultDate?: string
 }
 
-interface EditConsult {
-    id: string,
-    code: string,
-    description: string
-    patient?: string,
-    consultDate?: string
-}
-
-export async function getAllConsultationNotes() {
-    let notes: ConsultNote[] = []
+export async function useGetAllConsultationNotes() {
+    const apiUrl = `/api/consultation`
+    const resp = await $fetch(apiUrl, {
+        method: 'GET'
+    })
+    let notes = resp as ConsultNote[]
     return notes
 }
 
 export async function useGetConsulationNoteById(consultId: string) {
-    let note: ConsultNote[] | null = null
-    return note
+    const apiUrl = `/api/consultation/${consultId}`
+    const resp = await $fetch(apiUrl, {
+        method: 'GET'
+    })
+    return resp as ConsultNote
 }
 
 export async function useCreateConsulationNote(consulationNote: CreateConsult){
-    return
-}
-
-export async function useUpdateConsulationNote(consulationNote: EditConsult){
-    return
-}
-
-export async function useDeleteConsultaionNote(consultId: string){
-    return
+    const apiUrl = `/api/consultation`
+    const resp = await useFetch(apiUrl, {
+        method: 'POST',
+        body: consulationNote
+    })
+    return resp
 }
