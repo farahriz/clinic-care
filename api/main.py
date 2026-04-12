@@ -1,9 +1,9 @@
 from typing import Annotated, Optional
-from datetime import datetime, UTC
+from datetime import datetime
 import json
 
 from fastapi import FastAPI, HTTPException, Query, Depends
-from sqlmodel import Field, Session, SQLModel, create_engine, select, or_
+from sqlmodel import Field, Session, SQLModel, create_engine, select, or_ 
 from pydantic import BaseModel
 
 
@@ -17,8 +17,7 @@ class Note(SQLModel, table=True):
 	desc: str = Field(index=True)
 	patient: str
 	diagnosis_id: int | None = Field(default=None, foreign_key="diagnosis.id")
-	created_at: Optional[datetime] = Field(default=datetime.now(UTC), nullable=False)
-	updated_at: Optional[datetime] = Field(default_factory=datetime.now(UTC), nullable=False)
+	created_at: Optional[datetime] = Field(default_factory=datetime.now, nullable=False)
 
 class CreateNoteRequest(BaseModel):
 	desc: str
@@ -37,7 +36,6 @@ class NoteResponse(BaseModel):
 	patient: str
 	diagnosis_id: int
 	created_at: datetime
-	updated_at: datetime
 
 	class Config:
 		from_attributes = True
