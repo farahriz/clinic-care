@@ -35,8 +35,11 @@ export async function useGetAllConsultationNotes() {
 }
 
 export async function useGetConsulationNoteById(consultId: string) {
-    let note: ConsultNote[] | null = null
-    return note
+    const apiUrl = `/api/consultation/${consultId}`
+    const resp = await $fetch(apiUrl, {
+        method: 'GET'
+    })
+    return resp as ConsultNote
 }
 
 export async function useCreateConsulationNote(consulationNote: CreateConsult){
