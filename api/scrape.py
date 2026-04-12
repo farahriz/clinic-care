@@ -1,4 +1,5 @@
 import requests
+import json
 from bs4 import BeautifulSoup
 
 root_url="https://www.icd10data.com"
@@ -21,33 +22,32 @@ if(response.status_code == 200):
     example_href = "/ICD10CM/Codes/A00-B99/B20-B20"
     target_code_group_links = [link for link in code_group_links if len(link)==len(example_href)]
 
-    # increment to higher number later
     i = 0
-    while i < 2:
+    while i < 10:
         path = target_code_group_links[i]
         print(f"{root_url}{path}")
         i += 1
         sum_response = requests.get(f"{root_url}{path}", headers=headers)   
         if(sum_response.status_code == 200):
             soup2 = BeautifulSoup(sum_response.content, 'html.parser')
-            
-            lis = soup2.find_all('li')
-            print(lis)
-            #look for LIs with a href in them
 
-            # the hred text should be in the format 
+            def has_name_attr(tag):
+                return tag.has_attr('name')
 
-            # print(lis)
-            points = []
-            for point in points:
-                # a will be the code
-                # get the text
-                # format an object
-                # append to codes
-                # check length
-                if(len(codes) > 100):
+            code_points = soup2.find_all(has_name_attr, "a", class_="identifier")
+            for point in code_points:
+                codes.append({"code": point.text, "name": point.parent.text})
+                if(len(codes) > 150):
                     break
+        if(len(codes) > 150):
+            break
+            
+    json_data = json.dumps(codes, indent=2)
 
+    print('codes aquired:', len(codes))
+
+    with open("code_dump.json", "w") as json_file:
+        json_file.write(json_data)
 
 
 else:
