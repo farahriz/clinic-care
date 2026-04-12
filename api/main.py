@@ -2,7 +2,7 @@ from typing import Annotated, Optional
 import json
 
 from fastapi import FastAPI, HTTPException, Query, Depends
-from sqlmodel import Field, Session, SQLModel, create_engine, select
+from sqlmodel import Field, Session, SQLModel, create_engine, select, or_
 
 
 class Diagnosis(SQLModel, table=True):
@@ -10,11 +10,11 @@ class Diagnosis(SQLModel, table=True):
 	code: str = Field(index=True)
 	name: str = Field(default=None)
 
-# class Note(SQLModel, table=True):
-# 	id: int | None = Field(default=None, primary_key=True)
-# 	desc: str = Field(index=True)
-# 	date: str
-# 	patient: str
+class Note(SQLModel, table=True):
+	id: int | None = Field(default=None, primary_key=True)
+	desc: str = Field(index=True)
+	patient: str
+	diagnosis_id: int | None = Field(default=None, foreign_key="diagnosis.id")
 
 
 #Database setup
@@ -59,33 +59,39 @@ def read_root():
 
 
 # GET list of ALL diagnosis
-@app.get("/diagnoses")
+@app.get("/diagnosis", summary="Retreive all diagnosis codes")
 def read_all_diagnoses(
 	session: Session = Depends(get_session),
 	offset: int = 0,
-	limit: int = Query(default=200, le=200)
+	limit: int = Query(default=200, le=200),
+	search: str = Query(default=None, description="Searches for diagnosis based on text in name or code")
 ) -> list[Diagnosis]:
 	codes = session.exec(select(Diagnosis).offset(offset).limit(limit)).all()
 	# hacky workaround for seeding db with codes just for the purposes of this demo
 	if(len(codes) < 1):
 		seed_db()
+	if search:
+		codes = session.exec(select(Diagnosis).filter(or_(Diagnosis.code.contains(search), Diagnosis.name.contains(search))).offset(offset).limit(limit)).all()
 	return codes
 
 
 # GET all notes
 # @app.get("/notes")
-# def reat_notes(session: SessionDep) -> list[Note]
+# def read_notes(session: SessionDep) -> list[Note]
 
 
 # CREATE a consultation note
+# @app.post("/note")
+# def create_note()
+
+# READ just one consultation note
+# @app.get("/note")
+# def read_note()
 
 
 # UPDATE an existing consulation note
+# def update_note()
 
 
 # DELETE an exisitng consulation note
-
-
-# GET list of all consultation notes
-
-
+# def delete_note()
