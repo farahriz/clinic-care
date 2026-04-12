@@ -107,6 +107,15 @@ def read_notes(session: Session = Depends(get_session)) -> list[Note]:
 	notes = session.exec(select(Note)).all()
 	return notes
 
+@app.get("/consultation/{note_id}")
+def read_note(note_id: int, session: Session = Depends(get_session)) -> Note:
+	note = session.get(Note, note_id)
+	if not note:
+		raise HTTPException(
+			status_code=404, detail="Note note found"
+		)
+	return note
+
 
 # CREATE a consultation note
 @app.post("/consultation", response_model=NoteResponse)
