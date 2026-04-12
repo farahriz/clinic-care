@@ -1,5 +1,5 @@
 from typing import Annotated, Optional
-from datetime import datetime
+from datetime import datetime, UTC
 import json
 
 from fastapi import FastAPI, HTTPException, Query, Depends
@@ -17,6 +17,8 @@ class Note(SQLModel, table=True):
 	desc: str = Field(index=True)
 	patient: str
 	diagnosis_id: int | None = Field(default=None, foreign_key="diagnosis.id")
+	created_at: Optional[datetime] = Field(default=datetime.now(UTC), nullable=False)
+	updated_at: Optional[datetime] = Field(default_factory=datetime.now(UTC), nullable=False)
 
 class CreateNoteRequest(BaseModel):
 	desc: str
@@ -62,7 +64,7 @@ SessionDep = Annotated[Session, Depends(get_session)]
 app = FastAPI()
 
 
-def seed_db():
+async def seed_db():
 	with open('code_dump.json', 'r') as dump_file:
 		code_data = json.load(dump_file)
 
@@ -71,6 +73,7 @@ def seed_db():
 			new_code = Diagnosis(name=code_entry["name"], code=code_entry["code"])
 			session.add(new_code)		
 			session.commit()
+			session.refresh(new_code)
 
 @app.on_event("startup")
 def on_startup():
@@ -84,7 +87,7 @@ def read_root():
 
 # GET list of ALL diagnosis
 @app.get("/diagnosis", summary="Retreive all diagnosis codes")
-def read_all_diagnoses(
+async def read_all_diagnoses(
 	session: Session = Depends(get_session),
 	offset: int = 0,
 	limit: int = Query(default=200, le=200),
@@ -93,7 +96,8 @@ def read_all_diagnoses(
 	codes = session.exec(select(Diagnosis).offset(offset).limit(limit)).all()
 	# hacky workaround for seeding db with codes just for the purposes of this demo
 	if(len(codes) < 1):
-		seed_db()
+		await seed_db()
+		codes = session.exec(select(Diagnosis).offset(offset).limit(limit)).all()
 	if search:
 		codes = session.exec(select(Diagnosis).filter(or_(Diagnosis.code.contains(search), Diagnosis.name.contains(search))).offset(offset).limit(limit)).all()
 	return codes
