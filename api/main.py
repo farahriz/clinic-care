@@ -1,8 +1,10 @@
 from typing import Annotated, Optional
+from datetime import datetime
 import json
 
 from fastapi import FastAPI, HTTPException, Query, Depends
 from sqlmodel import Field, Session, SQLModel, create_engine, select, or_
+from pydantic import BaseModel
 
 
 class Diagnosis(SQLModel, table=True):
@@ -15,6 +17,28 @@ class Note(SQLModel, table=True):
 	desc: str = Field(index=True)
 	patient: str
 	diagnosis_id: int | None = Field(default=None, foreign_key="diagnosis.id")
+
+class CreateNoteRequest(BaseModel):
+	desc: str
+	patient: str
+	diagnosis_id: int
+
+# class UpdateNoteRequest(BaseModel):
+# 	id: int
+# 	desc: str
+# 	patient: str
+# 	diagnosis_id: int
+
+class NoteResponse(BaseModel):
+	id: int
+	desc: str
+	patient: str
+	diagnosis_id: int
+	created_at: datetime
+	updated_at: datetime
+
+	class Config:
+		from_attributes = True
 
 
 #Database setup
@@ -76,22 +100,24 @@ def read_all_diagnoses(
 
 
 # GET all notes
-# @app.get("/notes")
-# def read_notes(session: SessionDep) -> list[Note]
+@app.get("/consultation")
+def read_notes(session: Session = Depends(get_session)) -> list[Note]:
+	notes = session.exec(select(Note)).all()
+	return notes
 
 
 # CREATE a consultation note
-# @app.post("/note")
-# def create_note()
+@app.post("/consultation", response_model=NoteResponse)
+def create_note(request_data: CreateNoteRequest, session: Session = Depends(get_session)):
+	selected_diagnosis = session.get(Diagnosis, request_data.diagnosis_id)
+	if selected_diagnosis is None:
+		raise HTTPException(
+			status_code=402,
+			detail=f"The associated diagnosis for this consulation note is invalid. No diagnosis with ID {request_data.diagnosis_id} could be found."
+		)
 
-# READ just one consultation note
-# @app.get("/note")
-# def read_note()
-
-
-# UPDATE an existing consulation note
-# def update_note()
-
-
-# DELETE an exisitng consulation note
-# def delete_note()
+	new_note = Note.model_validate(request_data)
+	session.add(new_note)
+	session.commit()	
+	session.refresh(new_note)
+	return new_note
