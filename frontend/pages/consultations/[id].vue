@@ -22,7 +22,6 @@ const hasUnsavedChanges = ref(false)
 const fetchedData = ref({
     id: "",
     patient: "",
-    consultDate: "",
     code: "",
     description: ""
 })
@@ -30,9 +29,8 @@ const fetchedData = ref({
 const consultNoteData = ref({
     id: "",
     patient: "",
-    consultDate: "",
-    code: "",
-    description: ""
+    diagnosis_id: null,
+    desc: ""
 })
 
 watch(

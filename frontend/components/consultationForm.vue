@@ -1,9 +1,27 @@
 <template>
     <v-form>
         <v-text-field :disabled="readOnly" label="Patient" v-model="formData.patient"></v-text-field>
-        <v-text-field  :disabled="readOnly" label="Consultation Date" v-model="formData.consultDate"></v-text-field>
-        <v-autocomplete :disabled="readOnly" label="Diagnosis" v-model="formData.code"></v-autocomplete>
-        <v-textarea :disabled="readOnly" label="Description" v-model="formData.description"></v-textarea>
+        <v-autocomplete 
+            :disabled="readOnly" label="Diagnosis" 
+            clearable
+            chips
+            :filter-keys="['name', 'code']"
+            :items="diagnoses"
+            item-title="code" 
+            item-value="id"
+            v-model="formData.diagnosis_id">
+            <template v-slot:chip="{props, item}">
+                <v-chip v-bind="props" :text="`${item.code} - ${item.name}`"></v-chip>
+            </template>
+            <template v-slot:item="{props, item}">
+                <v-list-item v-bind="props"
+                    :title="item.code"
+                    :subtitle="item.name"
+                >
+                </v-list-item>
+            </template>
+        </v-autocomplete>
+        <v-textarea :disabled="readOnly" label="Description" v-model="formData.desc"></v-textarea>
     </v-form>
 </template>
 
@@ -17,11 +35,5 @@ const props = defineProps({
     }
 })
 
-// const formData = ref({
-//     id: null,
-//     code: "",
-//     patient: "",
-//     consultDate: "",
-//     description: ""
-// })
+const diagnoses = ref(await useFetchDiagnosis())
 </script>
