@@ -4,13 +4,14 @@
         </v-btn>
 
     <v-data-table class="mt-5" 
-      :items="consulations" 
-      :headers="headers">
-      <template v-slot:item.actions="{item}">
-        <NuxtLink :to="{ name: 'consultations-id', params: { id: item.id }}">
-            <v-icon icon="mdi-pencil" size="small"></v-icon>
-        </NuxtLink>
-      </template>
+        v-model:sort-by="sortBy"
+        :items="consulations" 
+        :headers="headers">
+        <template v-slot:item.actions="{item}">
+            <NuxtLink :to="{ name: 'consultations-id', params: { id: item.id }}">
+                <v-icon icon="mdi-pencil" size="small"></v-icon>
+            </NuxtLink>
+        </template>
     </v-data-table>
 </template>
 
@@ -25,6 +26,7 @@ const headers = [
 ]
 const consulations = ref(await useGetAllConsultationNotes())
 const diagnoses = ref(await useFetchDiagnosis())
+const sortBy = ref([{key: 'created_at', order: 'desc'}])
 
 function getDiagnosisCode(id){
     const code = diagnoses.value.find(code => code.id == id)
