@@ -1,590 +1,594 @@
 [
   {
     "code": "A00",
-    "name": "A00 Cholera"
+    "name": "Cholera"
   },
   {
     "code": "A00.0",
-    "name": "A00.0 Cholera due to Vibrio cholerae 01, biovar cho..."
+    "name": "Cholera due to Vibrio cholerae 01, biovar cho..."
   },
   {
     "code": "A00.1",
-    "name": "A00.1 Cholera due to Vibrio cholerae 01, biovar elt..."
+    "name": "Cholera due to Vibrio cholerae 01, biovar elt..."
   },
   {
     "code": "A00.9",
-    "name": "A00.9 Cholera, unspecified"
+    "name": "Cholera, unspecified"
   },
   {
     "code": "A01",
-    "name": "A01 Typhoid and paratyphoid fevers"
+    "name": "Typhoid and paratyphoid fevers"
   },
   {
     "code": "A01.0",
-    "name": "A01.0 Typhoid fever"
+    "name": "Typhoid fever"
   },
   {
     "code": "A01.01",
-    "name": "A01.01 Typhoid meningitis"
+    "name": "Typhoid meningitis"
   },
   {
     "code": "A01.03",
-    "name": "A01.03 Typhoid pneumonia"
+    "name": "Typhoid pneumonia"
   },
   {
     "code": "A01.04",
-    "name": "A01.04 Typhoid arthritis"
+    "name": "Typhoid arthritis"
   },
   {
     "code": "A01.05",
-    "name": "A01.05 Typhoid osteomyelitis"
+    "name": "Typhoid osteomyelitis"
   },
   {
     "code": "A01.1",
-    "name": "A01.1 Paratyphoid fever A"
+    "name": "Paratyphoid fever A"
   },
   {
     "code": "A01.2",
-    "name": "A01.2 Paratyphoid fever B"
+    "name": "Paratyphoid fever B"
   },
   {
     "code": "A01.3",
-    "name": "A01.3 Paratyphoid fever C"
+    "name": "Paratyphoid fever C"
   },
   {
     "code": "A01.4",
-    "name": "A01.4 Paratyphoid fever, unspecified"
+    "name": "Paratyphoid fever, unspecified"
   },
   {
     "code": "A02",
-    "name": "A02 Other salmonella infections"
+    "name": "Other salmonella infections"
   },
   {
     "code": "A02.0",
-    "name": "A02.0 Salmonella enteritis"
+    "name": "Salmonella enteritis"
   },
   {
     "code": "A02.1",
-    "name": "A02.1 Salmonella sepsis"
+    "name": "Salmonella sepsis"
   },
   {
     "code": "A02.2",
-    "name": "A02.2 Localized salmonella infections"
+    "name": "Localized salmonella infections"
   },
   {
     "code": "A02.20",
-    "name": "A02.20 Localized salmonella infection, unspecified"
+    "name": "Localized salmonella infection, unspecified"
   },
   {
     "code": "A02.21",
-    "name": "A02.21 Salmonella meningitis"
+    "name": "Salmonella meningitis"
   },
   {
     "code": "A02.22",
-    "name": "A02.22 Salmonella pneumonia"
+    "name": "Salmonella pneumonia"
   },
   {
     "code": "A02.23",
-    "name": "A02.23 Salmonella arthritis"
+    "name": "Salmonella arthritis"
   },
   {
     "code": "A02.24",
-    "name": "A02.24 Salmonella osteomyelitis"
+    "name": "Salmonella osteomyelitis"
   },
   {
     "code": "A02.25",
-    "name": "A02.25 Salmonella pyelonephritis"
+    "name": "Salmonella pyelonephritis"
   },
   {
     "code": "A02.29",
-    "name": "A02.29 Salmonella with other localized infection"
+    "name": "Salmonella with other localized infection"
   },
   {
     "code": "A02.8",
-    "name": "A02.8 Other specified salmonella infections"
+    "name": "Other specified salmonella infections"
   },
   {
     "code": "A02.9",
-    "name": "A02.9 Salmonella infection, unspecified"
+    "name": "Salmonella infection, unspecified"
   },
   {
     "code": "A03",
-    "name": "A03 Shigellosis"
+    "name": "Shigellosis"
   },
   {
     "code": "A03.0",
-    "name": "A03.0 Shigellosis due to Shigella dysenteriae"
+    "name": "Shigellosis due to Shigella dysenteriae"
   },
   {
     "code": "A03.1",
-    "name": "A03.1 Shigellosis due to Shigella flexneri"
+    "name": "Shigellosis due to Shigella flexneri"
   },
   {
     "code": "A03.2",
-    "name": "A03.2 Shigellosis due to Shigella boydii"
+    "name": "Shigellosis due to Shigella boydii"
   },
   {
     "code": "A03.3",
-    "name": "A03.3 Shigellosis due to Shigella sonnei"
+    "name": "Shigellosis due to Shigella sonnei"
   },
   {
     "code": "A03.8",
-    "name": "A03.8 Other shigellosis"
+    "name": "Other shigellosis"
   },
   {
     "code": "A03.9",
-    "name": "A03.9 Shigellosis, unspecified"
+    "name": "Shigellosis, unspecified"
   },
   {
     "code": "A04",
-    "name": "A04 Other bacterial intestinal infections"
+    "name": "Other bacterial intestinal infections"
   },
   {
     "code": "A04.0",
-    "name": "A04.0 Enteropathogenic Escherichia coli infection"
+    "name": "Enteropathogenic Escherichia coli infection"
   },
   {
     "code": "A04.1",
-    "name": "A04.1 Enterotoxigenic Escherichia coli infection"
+    "name": "Enterotoxigenic Escherichia coli infection"
   },
   {
     "code": "A04.2",
-    "name": "A04.2 Enteroinvasive Escherichia coli infection"
+    "name": "Enteroinvasive Escherichia coli infection"
   },
   {
     "code": "A04.3",
-    "name": "A04.3 Enterohemorrhagic Escherichia coli infection"
+    "name": "Enterohemorrhagic Escherichia coli infection"
   },
   {
     "code": "A04.4",
-    "name": "A04.4 Other intestinal Escherichia coli infections"
+    "name": "Other intestinal Escherichia coli infections"
   },
   {
     "code": "A04.5",
-    "name": "A04.5 Campylobacter enteritis"
+    "name": "Campylobacter enteritis"
   },
   {
     "code": "A04.6",
-    "name": "A04.6 Enteritis due to Yersinia enterocolitica"
+    "name": "Enteritis due to Yersinia enterocolitica"
   },
   {
     "code": "A04.7",
-    "name": "A04.7 Enterocolitis due to Clostridium difficile"
+    "name": "Enterocolitis due to Clostridium difficile"
   },
   {
     "code": "A04.71",
-    "name": "A04.71 Enterocolitis due to Clostridium difficile, r..."
+    "name": "Enterocolitis due to Clostridium difficile, r..."
   },
   {
     "code": "A04.72",
-    "name": "A04.72 Enterocolitis due to Clostridium difficile, n..."
+    "name": "Enterocolitis due to Clostridium difficile, n..."
   },
   {
     "code": "A04.8",
-    "name": "A04.8 Other specified bacterial intestinal infectio..."
+    "name": "Other specified bacterial intestinal infectio..."
   },
   {
     "code": "A04.9",
-    "name": "A04.9 Bacterial intestinal infection, unspecified"
+    "name": "Bacterial intestinal infection, unspecified"
   },
   {
     "code": "A05",
-    "name": "A05 Other bacterial foodborne intoxications, not ..."
+    "name": "Other bacterial foodborne intoxications, not ..."
   },
   {
     "code": "A05.0",
-    "name": "A05.0 Foodborne staphylococcal intoxication"
+    "name": "Foodborne staphylococcal intoxication"
   },
   {
     "code": "A05.1",
-    "name": "A05.1 Botulism food poisoning"
+    "name": "Botulism food poisoning"
   },
   {
     "code": "A05.2",
-    "name": "A05.2 Foodborne Clostridium perfringens [Clostridiu..."
+    "name": "Foodborne Clostridium perfringens [Clostridiu..."
   },
   {
     "code": "A05.3",
-    "name": "A05.3 Foodborne Vibrio parahaemolyticus intoxicatio..."
+    "name": "Foodborne Vibrio parahaemolyticus intoxicatio..."
   },
   {
     "code": "A05.4",
-    "name": "A05.4 Foodborne Bacillus cereus intoxication"
+    "name": "Foodborne Bacillus cereus intoxication"
   },
   {
     "code": "A05.5",
-    "name": "A05.5 Foodborne Vibrio vulnificus intoxication"
+    "name": "Foodborne Vibrio vulnificus intoxication"
   },
   {
     "code": "A05.8",
-    "name": "A05.8 Other specified bacterial foodborne intoxicat..."
+    "name": "Other specified bacterial foodborne intoxicat..."
   },
   {
     "code": "A05.9",
-    "name": "A05.9 Bacterial foodborne intoxication, unspecified..."
+    "name": "Bacterial foodborne intoxication, unspecified..."
   },
   {
     "code": "A06",
-    "name": "A06 Amebiasis"
+    "name": "Amebiasis"
   },
   {
     "code": "A06.0",
-    "name": "A06.0 Acute amebic dysentery"
+    "name": "Acute amebic dysentery"
   },
   {
     "code": "A06.1",
-    "name": "A06.1 Chronic intestinal amebiasis"
+    "name": "Chronic intestinal amebiasis"
   },
   {
     "code": "A06.2",
-    "name": "A06.2 Amebic nondysenteric colitis"
+    "name": "Amebic nondysenteric colitis"
   },
   {
     "code": "A06.3",
-    "name": "A06.3 Ameboma of intestine"
+    "name": "Ameboma of intestine"
   },
   {
     "code": "A06.4",
-    "name": "A06.4 Amebic liver abscess"
+    "name": "Amebic liver abscess"
   },
   {
     "code": "A06.5",
-    "name": "A06.5 Amebic lung abscess"
+    "name": "Amebic lung abscess"
   },
   {
     "code": "A06.6",
-    "name": "A06.6 Amebic brain abscess"
+    "name": "Amebic brain abscess"
   },
   {
     "code": "A06.7",
-    "name": "A06.7 Cutaneous amebiasis"
+    "name": "Cutaneous amebiasis"
   },
   {
     "code": "A06.8",
-    "name": "A06.8 Amebic infection of other sites"
+    "name": "Amebic infection of other sites"
   },
   {
     "code": "A06.81",
-    "name": "A06.81 Amebic cystitis"
+    "name": "Amebic cystitis"
   },
   {
     "code": "A06.82",
-    "name": "A06.82 Other amebic genitourinary infections"
+    "name": "Other amebic genitourinary infections"
   },
   {
     "code": "A06.89",
-    "name": "A06.89 Other amebic infections"
+    "name": "Other amebic infections"
   },
   {
     "code": "A06.9",
-    "name": "A06.9 Amebiasis, unspecified"
+    "name": "Amebiasis, unspecified"
   },
   {
     "code": "A07",
-    "name": "A07 Other protozoal intestinal diseases"
+    "name": "Other protozoal intestinal diseases"
   },
   {
     "code": "A07.0",
-    "name": "A07.0 Balantidiasis"
+    "name": "Balantidiasis"
   },
   {
     "code": "A07.1",
-    "name": "A07.1 Giardiasis [lambliasis]"
+    "name": "Giardiasis [lambliasis]"
   },
   {
     "code": "A07.2",
-    "name": "A07.2 Cryptosporidiosis"
+    "name": "Cryptosporidiosis"
   },
   {
     "code": "A07.3",
-    "name": "A07.3 Isosporiasis"
+    "name": "Isosporiasis"
   },
   {
     "code": "A07.4",
-    "name": "A07.4 Cyclosporiasis"
+    "name": "Cyclosporiasis"
   },
   {
     "code": "A07.8",
-    "name": "A07.8 Other specified protozoal intestinal diseases..."
+    "name": "Other specified protozoal intestinal diseases..."
   },
   {
     "code": "A07.9",
-    "name": "A07.9 Protozoal intestinal disease, unspecified"
+    "name": "Protozoal intestinal disease, unspecified"
   },
   {
     "code": "A08",
-    "name": "A08 Viral and other specified intestinal infectio..."
+    "name": "Viral and other specified intestinal infectio..."
   },
   {
     "code": "A08.0",
-    "name": "A08.0 Rotaviral enteritis"
+    "name": "Rotaviral enteritis"
   },
   {
     "code": "A08.1",
-    "name": "A08.1 Acute gastroenteropathy due to Norwalk agent ..."
+    "name": "Acute gastroenteropathy due to Norwalk agent ..."
   },
   {
     "code": "A08.11",
-    "name": "A08.11 Acute gastroenteropathy due to Norwalk agent"
+    "name": "Acute gastroenteropathy due to Norwalk agent"
   },
   {
     "code": "A08.19",
-    "name": "A08.19 Acute gastroenteropathy due to other small ro..."
+    "name": "Acute gastroenteropathy due to other small ro..."
   },
   {
     "code": "A08.2",
-    "name": "A08.2 Adenoviral enteritis"
+    "name": "Adenoviral enteritis"
   },
   {
     "code": "A08.3",
-    "name": "A08.3 Other viral enteritis"
+    "name": "Other viral enteritis"
   },
   {
     "code": "A08.31",
-    "name": "A08.31 Calicivirus enteritis"
+    "name": "Calicivirus enteritis"
   },
   {
     "code": "A08.32",
-    "name": "A08.32 Astrovirus enteritis"
+    "name": "Astrovirus enteritis"
   },
   {
     "code": "A08.39",
-    "name": "A08.39 Other viral enteritis"
+    "name": "Other viral enteritis"
   },
   {
     "code": "A08.4",
-    "name": "A08.4 Viral intestinal infection, unspecified"
+    "name": "Viral intestinal infection, unspecified"
   },
   {
     "code": "A08.8",
-    "name": "A08.8 Other specified intestinal infections"
+    "name": "Other specified intestinal infections"
   },
   {
     "code": "A09",
-    "name": "A09 Infectious gastroenteritis and colitis, unspe..."
+    "name": "Infectious gastroenteritis and colitis, unspe..."
   },
   {
     "code": "B90",
-    "name": "B90 Sequelae of tuberculosis"
+    "name": "Sequelae of tuberculosis"
   },
   {
     "code": "B90.0",
-    "name": "B90.0 Sequelae of central nervous system tuberculos..."
+    "name": "Sequelae of central nervous system tuberculos..."
   },
   {
     "code": "B90.1",
-    "name": "B90.1 Sequelae of genitourinary tuberculosis"
+    "name": "Sequelae of genitourinary tuberculosis"
   },
   {
     "code": "B90.2",
-    "name": "B90.2 Sequelae of tuberculosis of bones and joints"
+    "name": "Sequelae of tuberculosis of bones and joints"
   },
   {
     "code": "B90.8",
-    "name": "B90.8 Sequelae of tuberculosis of other organs"
+    "name": "Sequelae of tuberculosis of other organs"
   },
   {
     "code": "B90.9",
-    "name": "B90.9 Sequelae of respiratory and unspecified tuber..."
+    "name": "Sequelae of respiratory and unspecified tuber..."
   },
   {
     "code": "A15",
-    "name": "A15 Respiratory tuberculosis"
+    "name": "Respiratory tuberculosis"
   },
   {
     "code": "A15.0",
-    "name": "A15.0 Tuberculosis of lung"
+    "name": "Tuberculosis of lung"
   },
   {
     "code": "A15.4",
-    "name": "A15.4 Tuberculosis of intrathoracic lymph nodes"
+    "name": "Tuberculosis of intrathoracic lymph nodes"
   },
   {
     "code": "A15.5",
-    "name": "A15.5 Tuberculosis of larynx, trachea and bronchus"
+    "name": "Tuberculosis of larynx, trachea and bronchus"
   },
   {
     "code": "A15.6",
-    "name": "A15.6 Tuberculous pleurisy"
+    "name": "Tuberculous pleurisy"
   },
   {
     "code": "A15.7",
-    "name": "A15.7 Primary respiratory tuberculosis"
+    "name": "Primary respiratory tuberculosis"
   },
   {
     "code": "A15.8",
-    "name": "A15.8 Other respiratory tuberculosis"
+    "name": "Other respiratory tuberculosis"
   },
   {
     "code": "A15.9",
-    "name": "A15.9 Respiratory tuberculosis unspecified"
+    "name": "Respiratory tuberculosis unspecified"
   },
   {
     "code": "A17",
-    "name": "A17 Tuberculosis of nervous system"
+    "name": "Tuberculosis of nervous system"
   },
   {
     "code": "A17.0",
-    "name": "A17.0 Tuberculous meningitis"
+    "name": "Tuberculous meningitis"
   },
   {
     "code": "A17.1",
-    "name": "A17.1 Meningeal tuberculoma"
+    "name": "Meningeal tuberculoma"
   },
   {
     "code": "A17.8",
-    "name": "A17.8 Other tuberculosis of nervous system"
+    "name": "Other tuberculosis of nervous system"
   },
   {
     "code": "A17.81",
-    "name": "A17.81 Tuberculoma of brain and spinal cord"
+    "name": "Tuberculoma of brain and spinal cord"
   },
   {
     "code": "A17.82",
-    "name": "A17.82 Tuberculous meningoencephalitis"
+    "name": "Tuberculous meningoencephalitis"
   },
   {
     "code": "A17.83",
-    "name": "A17.83 Tuberculous neuritis"
+    "name": "Tuberculous neuritis"
   },
   {
     "code": "A17.89",
-    "name": "A17.89 Other tuberculosis of nervous system"
+    "name": "Other tuberculosis of nervous system"
   },
   {
     "code": "A17.9",
-    "name": "A17.9 Tuberculosis of nervous system, unspecified"
+    "name": "Tuberculosis of nervous system, unspecified"
   },
   {
     "code": "A18",
-    "name": "A18 Tuberculosis of other organs"
+    "name": "Tuberculosis of other organs"
   },
   {
     "code": "A18.0",
-    "name": "A18.0 Tuberculosis of bones and joints"
+    "name": "Tuberculosis of bones and joints"
   },
   {
     "code": "A18.01",
-    "name": "A18.01 Tuberculosis of spine"
+    "name": "Tuberculosis of spine"
   },
   {
     "code": "A18.02",
-    "name": "A18.02 Tuberculous arthritis of other joints"
+    "name": "Tuberculous arthritis of other joints"
   },
   {
     "code": "A18.03",
-    "name": "A18.03 Tuberculosis of other bones"
+    "name": "Tuberculosis of other bones"
   },
   {
     "code": "A18.09",
-    "name": "A18.09 Other musculoskeletal tuberculosis"
+    "name": "Other musculoskeletal tuberculosis"
   },
   {
     "code": "A18.1",
-    "name": "A18.1 Tuberculosis of genitourinary system"
+    "name": "Tuberculosis of genitourinary system"
   },
   {
     "code": "A18.10",
-    "name": "A18.10 Tuberculosis of genitourinary system, unspeci..."
+    "name": "Tuberculosis of genitourinary system, unspeci..."
   },
   {
     "code": "A18.11",
-    "name": "A18.11 Tuberculosis of kidney and ureter"
+    "name": "Tuberculosis of kidney and ureter"
   },
   {
     "code": "A18.12",
-    "name": "A18.12 Tuberculosis of bladder"
+    "name": "Tuberculosis of bladder"
   },
   {
     "code": "A18.13",
-    "name": "A18.13 Tuberculosis of other urinary organs"
+    "name": "Tuberculosis of other urinary organs"
   },
   {
     "code": "A18.14",
-    "name": "A18.14 Tuberculosis of prostate"
+    "name": "Tuberculosis of prostate"
   },
   {
     "code": "A18.15",
-    "name": "A18.15 Tuberculosis of other male genital organs"
+    "name": "Tuberculosis of other male genital organs"
   },
   {
     "code": "A18.16",
-    "name": "A18.16 Tuberculosis of cervix"
+    "name": "Tuberculosis of cervix"
   },
   {
     "code": "A18.17",
-    "name": "A18.17 Tuberculous female pelvic inflammatory diseas..."
+    "name": "Tuberculous female pelvic inflammatory diseas..."
   },
   {
     "code": "A18.18",
-    "name": "A18.18 Tuberculosis of other female genital organs"
+    "name": "Tuberculosis of other female genital organs"
   },
   {
     "code": "A18.2",
-    "name": "A18.2 Tuberculous peripheral lymphadenopathy"
+    "name": "Tuberculous peripheral lymphadenopathy"
   },
   {
     "code": "A18.3",
-    "name": "A18.3 Tuberculosis of intestines, peritoneum and me..."
+    "name": "Tuberculosis of intestines, peritoneum and me..."
   },
   {
     "code": "A18.31",
-    "name": "A18.31 Tuberculous peritonitis"
+    "name": "Tuberculous peritonitis"
   },
   {
     "code": "A18.32",
-    "name": "A18.32 Tuberculous enteritis"
+    "name": "Tuberculous enteritis"
   },
   {
     "code": "A18.39",
-    "name": "A18.39 Retroperitoneal tuberculosis"
+    "name": "Retroperitoneal tuberculosis"
   },
   {
     "code": "A18.4",
-    "name": "A18.4 Tuberculosis of skin and subcutaneous tissue"
+    "name": "Tuberculosis of skin and subcutaneous tissue"
   },
   {
     "code": "A18.5",
-    "name": "A18.5 Tuberculosis of eye"
+    "name": "Tuberculosis of eye"
+  },
+  {
+    "code": "A18.50",
+    "name": "\u2026\u2026 unspecified"
   },
   {
     "code": "A18.51",
-    "name": "A18.51 Tuberculous episcleritis"
+    "name": "Tuberculous episcleritis"
   },
   {
     "code": "A18.52",
-    "name": "A18.52 Tuberculous keratitis"
+    "name": "Tuberculous keratitis"
   },
   {
     "code": "A18.53",
-    "name": "A18.53 Tuberculous chorioretinitis"
+    "name": "Tuberculous chorioretinitis"
   },
   {
     "code": "A18.54",
-    "name": "A18.54 Tuberculous iridocyclitis"
+    "name": "Tuberculous iridocyclitis"
   },
   {
     "code": "A18.59",
-    "name": "A18.59 Other tuberculosis of eye"
+    "name": "Other tuberculosis of eye"
   },
   {
     "code": "A18.6",
-    "name": "A18.6 Tuberculosis of (inner) (middle) ear"
+    "name": "Tuberculosis of (inner) (middle) ear"
   },
   {
     "code": "A18.7",
-    "name": "A18.7 Tuberculosis of adrenal glands"
+    "name": "Tuberculosis of adrenal glands"
   },
   {
     "code": "A18.8",
-    "name": "A18.8 Tuberculosis of other specified organs"
+    "name": "Tuberculosis of other specified organs"
   },
   {
     "code": "A18.81",
-    "name": "A18.81 Tuberculosis of thyroid gland"
+    "name": "Tuberculosis of thyroid gland"
   },
   {
     "code": "A18.82",
-    "name": "A18.82 Tuberculosis of other endocrine glands"
+    "name": "Tuberculosis of other endocrine glands"
   }
 ]

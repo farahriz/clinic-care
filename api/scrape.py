@@ -36,7 +36,7 @@ if(response.status_code == 200):
 
             code_points = soup2.find_all(has_name_attr, "a", class_="identifier")
             for point in code_points:
-                codes.append({"code": point.text, "name": point.parent.text})
+                codes.append({"code": point.text, "name": point.parent.text.split(' ', 1)[1]})
                 if(len(codes) > 150):
                     break
         if(len(codes) > 150):
