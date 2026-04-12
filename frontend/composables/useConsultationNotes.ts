@@ -1,25 +1,13 @@
 interface ConsultNote {
     id?: string,
-    code: string,
-    description: string
-    patient?: string,
-    consultDate?: string
-    createdAt: string,
-    createdBy: string,
-    updatedAt: string,
-    updatedBy: string
+    diagnosisId: string,
+    desc: string
+    patient: string,
+    created_at: string,
 }
 
 interface CreateConsult {
-    code: string,
-    description: string
-    patient?: string,
-    consultDate?: string
-}
-
-interface EditConsult {
-    id: string,
-    code: string,
+    diagnosis_id: string,
     description: string
     patient?: string,
     consultDate?: string
@@ -43,13 +31,10 @@ export async function useGetConsulationNoteById(consultId: string) {
 }
 
 export async function useCreateConsulationNote(consulationNote: CreateConsult){
-    return
-}
-
-export async function useUpdateConsulationNote(consulationNote: EditConsult){
-    return
-}
-
-export async function useDeleteConsultaionNote(consultId: string){
-    return
+    const apiUrl = `/api/consultation`
+    const resp = await useFetch(apiUrl, {
+        method: 'POST',
+        body: consulationNote
+    })
+    return resp
 }
