@@ -24,16 +24,8 @@
     "name": "A01.0 Typhoid fever"
   },
   {
-    "code": "A01.00",
-    "name": "A01.00 \u2026\u2026 unspecified"
-  },
-  {
     "code": "A01.01",
     "name": "A01.01 Typhoid meningitis"
-  },
-  {
-    "code": "A01.02",
-    "name": "A01.02 \u2026\u2026 with heart involvement"
   },
   {
     "code": "A01.03",
@@ -46,10 +38,6 @@
   {
     "code": "A01.05",
     "name": "A01.05 Typhoid osteomyelitis"
-  },
-  {
-    "code": "A01.09",
-    "name": "A01.09 \u2026\u2026 with other complications"
   },
   {
     "code": "A01.1",
@@ -558,10 +546,6 @@
   {
     "code": "A18.5",
     "name": "A18.5 Tuberculosis of eye"
-  },
-  {
-    "code": "A18.50",
-    "name": "A18.50 \u2026\u2026 unspecified"
   },
   {
     "code": "A18.51",
