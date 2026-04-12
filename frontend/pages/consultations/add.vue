@@ -9,12 +9,12 @@ const route = useRoute()
 
 const consultNoteData = ref({
     patient: "",
-    consultDate: "",
     code: "",
-    description: ""
+    desc: ""
 })
 
 async function saveChanges(){
+    console.log(consultNoteData.value) 
     return
 }
 
