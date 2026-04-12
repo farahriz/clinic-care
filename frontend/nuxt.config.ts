@@ -16,5 +16,8 @@ export default defineNuxtConfig({
         transformAssetUrls,
       }
     }
+  },
+  routeRules: {
+    '/api/**': {proxy: 'http://localhost:8000/**'} 
   }
 })
