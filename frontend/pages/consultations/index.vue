@@ -6,6 +6,11 @@
     <v-data-table class="mt-5" 
       :items="consulations" 
       :headers="headers">
+      <template v-slot:item.actions="{item}">
+        <NuxtLink :to="{ name: 'consultations-id', params: { id: item.id }}">
+            <v-icon icon="mdi-pencil" size="small"></v-icon>
+        </NuxtLink>
+      </template>
     </v-data-table>
 </template>
 
@@ -15,7 +20,8 @@ const headers = [
     {title: "Patient", value: "patient", key: "patient"},
     {title: "Code", key: "diagnosis_id", value: item => getDiagnosisCode(item.diagnosis_id)},
     {title: "Description", value: "desc"},
-    {title: "Created at", value: item => new Date(item.created_at).toUTCString(), key: "created_at"}
+    {title: "Created at", value: item => new Date(item.created_at).toUTCString(), key: "created_at"},
+    {title: "Actions", key: "actions"}
 ]
 const consulations = ref(await useGetAllConsultationNotes())
 const diagnoses = ref(await useFetchDiagnosis())

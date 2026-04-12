@@ -25,8 +25,12 @@ interface EditConsult {
     consultDate?: string
 }
 
-export async function getAllConsultationNotes() {
-    let notes: ConsultNote[] = []
+export async function useGetAllConsultationNotes() {
+    const apiUrl = `/api/consultation`
+    const resp = await $fetch(apiUrl, {
+        method: 'GET'
+    })
+    let notes = resp as ConsultNote[]
     return notes
 }
 
